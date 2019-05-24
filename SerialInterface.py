@@ -32,8 +32,6 @@ def volumeInc():
 	if ("off" in volOutput):
 		s.Popen(['amixer', '-D', 'pulse', 'set', 'Master', 'toggle'])
 		volOutput = s.check_output(['amixer', 'set', 'Master', '40%+'])
-def toggle():
-	pyautogui.hotkey('alt', 'tab')
 
 #Judgement Area :P
 while(True):
@@ -72,7 +70,3 @@ while(True):
 		if("33448095" in plainstring1):
 			print("volume 10% ++")
 			volumeInc()
-
-		if("33441975" in plainstring1):
-			print("Toggle")
-			toggle()
